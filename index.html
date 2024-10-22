@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedidos de Comida</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    
+    
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="containter_principalHeader">
+        <div class="containter_contentHeader">
+          <div class="headSearch">
+            <input type="text" class="inputHeader" id="inputHeader" placeholder="Buscar pedidos...">
+            <button id="searchButton" class="searchButton">
+              Buscar <span class="material-symbols-outlined icon">
+                search
+                </span>
+
+            </button>
+          </div>
+  
+          <div>
+            <button class="addButton_Header" id="addButton_Header">
+              Añadir elemento <span class="material-symbols-outlined icon">
+                add_circle
+                </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <div class="container_view"> 
+        <aside class="listAside">
+          <h2>
+            Categorias <span class="material-symbols-outlined icon">
+              filter_list
+              </span>
+          </h2>
+          <ul id="listFilter" />
+        </aside>
+
+        <div class="store" id="storeContainer"/>
+
+
+
+
+      </div>
+
+      <!--POPUP-->
+      <div id="modalPopUp" class="PopUpContainer_Principal" style="display: none;">  <!-- Asegúrate de que el modal esté oculto por defecto -->
+        <div class="PopUpContainer">
+         <div class="containerTitle_PopUp">
+          <h1>Agregar o modificar un producto</h1>
+          </div>
+
+          <div class="containerInputs_PopUp">
+            <input type="text" placeholder="Ingrese un nombre" id="name">
+            <input type="number" placeholder="Ingrese un precio" id="price">
+            <input type="text" placeholder="Ingrese una imagen" id="image">
+
+            <select id="categoria">
+              <option>Seleccione una categoria</option>
+              <option>Gaseosas</option>
+              <option>Hamburguesas</option>
+              <option>Papas</option>
+            </select>
+          </div>
+
+          <div class="containterButtons_PopUp">
+            <button class="buttonPopUp cancel" id="buttonCancel">Cancelar</button>
+            <button class="buttonPopUp accept" id="buttonAccept">Aceptar</button>
+            <button class="buttonPopUp delete" id="buttonDelete">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

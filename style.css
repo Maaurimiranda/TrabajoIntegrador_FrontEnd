@@ -1,0 +1,341 @@
+/* ================ GENERALS ================ */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
+}
+
+.icon {
+  display: inline-block;   /* Asegura que el icono esté en línea y no desborde */
+  max-height: 100%;        /* Limita la altura del icono al 100% del contenedor */
+  overflow: hidden;        /* Oculta cualquier parte del icono que se desborde */
+  vertical-align: middle;
+  padding: 0.2rem;  /* Asegura que el icono esté bien alineado con el texto o contenido cercano */
+}
+
+
+.icon-container {
+  height: auto;         /* Ajusta la altura del contenedor al tamaño del icono */
+  overflow: hidden;     /* Evita cualquier tipo de desbordamiento en el contenedor */
+}
+
+
+.container {
+  width: 100%;
+  box-sizing: border-box; /* Para asegurarse de que el padding se incluye en el ancho total */
+}
+ /* ================ HEADER ================ */
+ .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Para asegurarte de que cubra todo el ancho */
+}
+
+ .containter_principalHeader{
+  width: 100vw;
+  height: 8vh;
+  background-color: #003366;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.containter_contentHeader{
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem;
+}
+
+.headSearch{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1vh;
+}
+
+.inputHeader {
+  border-radius: 0.4rem;
+  border: none;
+  padding: 0.4rem;
+  outline: none;
+  font-size: 1.7vh;
+  height: 3vh;
+  width: 20vw;
+}
+
+.searchButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 0.4rem;
+  padding: 0.4rem;
+  width: 12vw;
+  color: white;
+  transition: 0.3s;
+}
+.searchButton:hover{
+ cursor: pointer;
+ background-color: #2c66a1;
+}
+
+.addButton_Header{
+  width: 20vw;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+.addButton_Header:hover{
+  cursor: pointer;
+  background-color: #2c66a1;
+}
+
+/* ================ MAIN ================ */
+.container_view{
+  display: grid;
+  grid-template-columns: 0.20fr 0.80fr;
+  width: 100vw;
+  height: 92vh;
+}
+
+.listAside{
+  background-color: white;
+  height: 92vh;
+  width: 100%;
+  text-align: left;
+}
+
+/* ================ STORE ================ */
+.store{
+  max-height: 92vh;
+  overflow-y: auto; 
+  background-color: rgb(234, 234, 234);
+  width: 100%;
+  
+}
+
+.sectionStore{
+  background-color: rgb(194, 197, 255);
+  margin: 1rem;
+  padding: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.2vh;
+  flex-direction: column;
+  border-radius: 0.4rem;
+}
+
+.containerTitleSection{
+  margin: 1rem;
+  font-size: 3vh;
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vh;
+}
+
+.containerProductStore{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 0.6fr);
+  gap: 1vh;
+  overflow-y: hidden; /* Ocultar barra de desplazamiento vertical */
+  max-height: 100%;
+}
+
+.containerTargetItem{
+  width: 20vw;
+  height: 40vh;
+  justify-content:space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.4rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.4rem;
+  transition: 0.2s ease;
+}
+
+.containerTargetItem:hover{
+  cursor: pointer;
+  background-color: #1b6ec2;
+  transform: scale(1.01);
+}
+
+.containerTargetItem h2{
+  font-size: 2.4vh;
+  text-align: center;
+}
+
+.targetProps{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1vh;
+  padding: 0.4rem;
+}
+
+.sectionStore img {
+  width: 100%;
+  border-radius: 0.4rem;
+}
+
+/*================ LIST ASIDE ================ */
+
+.listAside{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.listAside h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 2rem;
+}
+
+.listAside ul {
+  margin-top: 3vh;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 1vh;
+}
+.listAside ul li {
+  font-size: 2vh;
+  font-weight: 500;
+  border-radius: 0.4rem;
+  padding: 0.4rem;
+}
+
+.listAside ul li :hover{
+  cursor: pointer;
+  background-color:#003366;
+  color: white;
+}
+
+.liActive {
+  background-color:#003366;
+  color: white;
+}
+
+/*=== POPUP ===*/
+.PopUpContainer_Principal{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+}
+
+.PopUpContainer{
+  width: 50vw;
+  height: 50vh;
+  background-color: white;
+  display: flex;
+  box-shadow: 5px 2px 10px rgba(0, 0, 0, 00.3);
+  border-radius: 0.4rem;
+  flex-direction: column;
+  justify-content: space-around;
+} 
+
+.containerTitle_PopUp{  
+  text-align: center;
+  width: 100%;
+}
+
+.containerInputs_PopUp{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+
+.containerInputs_PopUp input, select{
+  width: 60%;
+  gap: 2vh;
+  border: 1px solid gray;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+}
+
+.containterButtons_PopUp{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttonPopUp{
+  padding: 0.6rem;
+  border-radius: 0.4rem;
+  border: none;
+  background-color: rgb(222, 222, 222);
+  transition: 0.3s;
+  font-size: 1.5vh;
+}
+.buttonPopUp:hover{
+  cursor: pointer;
+  background-color: #2c66a1;
+}
+
+.no-scroll {
+  overflow: hidden; /* Elimina el scroll */
+}
+
+/* ======== MEDIA QUERY =======*/
+
+@media screen and (min-width: 1280px) {
+  .containerProductStore{
+    grid-template-columns: repeat(4, 0.6fr);
+    gap: 1vh;
+    max-height: 100%;
+    /* overflow-y: hidden; /* Ocultar barra de desplazamiento vertical */
+  }
+  
+  .containerTargetItem{
+    width: 15vw;
+    
+  }
+}
+
+/* ========= SCROLLBAR ======= */
+::-webkit-scrollbar{
+
+  width: 0.7rem;
+  background-color: white;
+  border-radius: 0.4rem;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #003366;
+  border-radius: 0.4rem;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: #165394;
+  border-radius: 0.4rem;
+}
